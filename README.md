@@ -3,7 +3,9 @@
 ## Objective : 
 Medical expense is a crucial topic for every US citizen as medical cost in the US is relatively high in the world. Medical needs are unaffordable to most of the population without medical insurance. Therefore medical insurance industry is a critical product for insurance companies. The aim of this study is to analyze and predict the medical insurance premium (charges) for individuals.  
 
-This project is written in ***R***.
+This project is written in ***R***.  
+For quick summary, please refer to our [powerpoint](https://drive.google.com/file/d/1NjQW8-6npV46wZWZ2HJn95Wjg5RiJ6wQ/view?usp=sharing).
+
 
 ## Dataset :
 This dataset is provided in the book "Machine Learning with R" which can be found on [Github](https://github.com/stedy/Machine-Learning-with-R-datasets) or [Kaggle](https://www.kaggle.com/mirichoi0218/insurance). The data contains medical information and costs billed by health insurance companies. It contains 1338 rows of data and the following columns:
@@ -16,6 +18,18 @@ This dataset is provided in the book "Machine Learning with R" which can be foun
 - smoker: Smoking
 - region: the beneficiary's residential area in the US, northeast, southeast, southwest, northwest.
 - charges: Individual medical costs billed by health insurance
+
+## Highlights from Exploratory Data Analysis :
+### Age and Charges
+The darker the color, the higher the correlation. The pie charts shows the proportion of the correlation between variables.
+Relatively speaking, charges have a stronger correlation to age.
+
+
+## Data Cleaning : 
+1. Convert the categorical variables (Sex, Smoker, Region) into factors
+2. Remove outliers in the BMI variable identified in the boxplot
+3. Remove influential outliers using Cook’s distance
+
 
 ## Results : 
 ### Interpretation of the coefficients 
