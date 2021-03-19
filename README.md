@@ -10,7 +10,6 @@ For quick summary, please refer to our [powerpoint](https://drive.google.com/fil
 ## Dataset :
 This dataset is provided in the book "Machine Learning with R" which can be found on [Github](https://github.com/stedy/Machine-Learning-with-R-datasets) or [Kaggle](https://www.kaggle.com/mirichoi0218/insurance). The data contains medical information and costs billed by health insurance companies. It contains 1338 rows of data and the following columns:
 
-
 - age: age of primary beneficiary
 - sex: insurance contractor gender, female, male
 - bmi: Body mass index, providing an understanding of body, weights that are relatively high or low relative to height, objective index of body weight (kg / m ^ 2) using the ratio of height to weight, ideally 18.5 to 24.9
@@ -20,9 +19,22 @@ This dataset is provided in the book "Machine Learning with R" which can be foun
 - charges: Individual medical costs billed by health insurance
 
 ## Highlights from Exploratory Data Analysis :
+
+### Correlation between numerical variables
+The darker the color, the stronger the correlation. The pie charts shows the proportion of the correlation between variables.
+Relatively speaking, charges have a stronger correlation to age. The independent variables have weak correlation with each other.  
+<img src="/images/corr_plot.png" width="300">
+
 ### Age and Charges
-The darker the color, the higher the correlation. The pie charts shows the proportion of the correlation between variables.
-Relatively speaking, charges have a stronger correlation to age.
+<img src="/images/chargesNage.png" width="300">  <img src="/images/Charge_age_smoker.png" width="300">  
+Charges is directly proportional with age. The average charges rise when age increases.
+If we take smoker factor into account, which is displayed in 2 different colours
+Most smokers are charged more than non-smokers.
+
+### BMI, Smoker and Charges
+<img src="/images/Charge_BMI_smoker.png" width="300">   
+The distribution of BMI and charges looks like a megaphone , i.e. the charges becomes more diversified when BMI increases.
+Non-smokers(blue colour) have a more concentrated distribution below $20000. Charges for smokers(pink colour) increase with their BMI.
 
 
 ## Data Cleaning : 
