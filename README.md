@@ -64,11 +64,12 @@ The majority of the sample has 3 children or less. Those who have **5 children**
 1. Convert the categorical variables (Sex, Smoker, Region) into factors
 2. Remove outliers in the BMI variable identified in the boxplot
 3. Remove influential outliers using Cook’s distance
-
+   - If the residual of a particular data is > 4/n (n = 1329) , i.e. >0.0030098, we remove that data. To visualize it, the data point above the red line will be removed.  
+<img src="/images/cook_distance.png" width="300">  
 
 ## Results : 
 
-Multiple Regression model is used without including **sex** as an independent variable after removing outliers of BMI.
+Multiple Regression model is used without including **sex** as an independent variable after removing outliers.
 Data is split into training and testing sets : 70% for training ; 30% for testing.
 
 ### Interpretation of the coefficients 
@@ -82,6 +83,24 @@ Data is split into training and testing sets : 70% for training ; 30% for testin
   2) Southeast : Clients in Southeast pay $1125.22 less than Northeastern clients, holding other variables constant
   3) Southwest : Clients in Southeast pay $1094.49 less than Northeastern clients, holding other variables constant
 
+### Regression Assumption Checking
+#### Mean and normal distribution :
+- Mean of residuals is 0
+- The residuals are **not normally distributed** as P-value of Shapiro-Wilk test <5%. We reject H0: normal distribution.
+- Since the dataset is **large enough** and the model is robust, we can still keep the model.
+
+#### Autocorrelation and Multicollinearity :
+- The residuals are **not autocorrelated** as P-value of Durbin Watson test is 9.2% which >5%. We accept H0: residuals are not autocorrelated. 
+- All independent variables are not correlated as all VIF are <5.
+
+#### Homoskedasticity :
+- The residuals are heteroskedastic as P-value of Breusch-Pagan test is <5%. We reject H0: homoskedasticity. 
+- Robust standard error is used to deal with Heteroskedasticity and get the adjusted standard error and t-test of the model.
+Remedy:  
+- Create a Covariance Matrix to calculate robust standard errors. 
+- Use the robust standard errors to re-calculate a coefficient table as shown on the left.
+- All independent variables are still significant but with different standard errors. 
+- The estimated coefficients remain the same. Only t test becomes unreliable under heteroskedasticity.
 ### In-sample Analysis
 ![prediction](images/prediction.png)  
 The model predicts most of the test data but not when the charges rise. There seems to be three groups of medical insurance charges. We may work further on it in the future.
