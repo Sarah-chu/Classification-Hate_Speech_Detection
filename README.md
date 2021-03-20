@@ -73,7 +73,8 @@ Multiple Regression model is used without including **sex** as an independent va
 Data is split into training and testing sets : 70% for training ; 30% for testing.
 
 ### Interpretation of the coefficients 
-![summary](/images/summary_reg.png)  
+<img src="/images/summary_reg.png" width="500">  
+
 - Age : when age increases by 1 unit, i.e. 1 year older, the insurance premium increase by $252.35, holding other variables constant
 - Bmi : when bmi increases by 1 unit, the insurance premium increase by $294.96, holding other variables constant
 - Children : when children increases by 1 unit, i.e. one more child, the insurance premium increase by $493.92, holding other variables constant
@@ -102,7 +103,7 @@ Remedy:
 - All independent variables are still significant but with different standard errors. 
 - The estimated coefficients remain the same. Only t test becomes unreliable under heteroskedasticity.
 ### In-sample Analysis
-![prediction](images/prediction.png)  
+<img src="/images/prediction.png" width="300">  
 The model predicts most of the test data but not when the charges rise. There seems to be three groups of medical insurance charges. We may work further on it in the future.
 
 ## Acknowledgements :
