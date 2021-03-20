@@ -31,10 +31,27 @@ Charges is directly proportional with age. The average charges rise when age inc
 If we take smoker factor into account, which is displayed in 2 different colours
 Most smokers are charged more than non-smokers.
 
+### Smoker and Charges
+<img src="/images/Charge_smoker.png" width="300">    
+The majority of the samples is non-smokers. Generally speaking, smokers pay more than non-smokers. Most of the non-smokers pay less than $18000, less than the lowest fee smokers pay. The charges for non-smokers vary from $1000 to $40000 while the charges for smokers range from $16000 to $64000.
+
 ### BMI, Smoker and Charges
 <img src="/images/Charge_BMI_smoker.png" width="300">   
 The distribution of BMI and charges looks like a megaphone , i.e. the charges becomes more diversified when BMI increases.
 Non-smokers(blue colour) have a more concentrated distribution below $20000. Charges for smokers(pink colour) increase with their BMI.
+
+### Sex and Charges
+<img src="/images/charge_sex.png" width="300">  
+The distribution of both groups are similar :  
+The majority of both groups are charged less than $20000. The rest disperse between $20000 and $50000. There is a minority of outliers (around 5) beyond $50000. 
+
+### Region and Charge
+<img src="/images/charge_region.png" width="300">   
+The distribution of charges against the four regions is similar. The majority of the people in each group are charged less than $20000. Some charges are around $20000 and $50000. There are outliers (1 or 2 per group) of more than $50000.
+
+### Number of Children and Charge
+<img src="/images/charge_children.png" width="300">   
+The majority of the sample has 3 children or less. Those who have **5 children** are all charged **less than $20000**. Some people who have less children are charged up to $50000, with few outliers beyond this amount.
 
 
 ## Data Cleaning : 
