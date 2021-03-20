@@ -6,6 +6,12 @@ Medical expense is a crucial topic for every US citizen as medical cost in the U
 This project is written in ***R***.  
 For quick summary, please refer to our [powerpoint](https://drive.google.com/file/d/1NjQW8-6npV46wZWZ2HJn95Wjg5RiJ6wQ/view?usp=sharing).
 
+## Executive Summary :
+- Age, BMI , smoker, no.of children and regions are related to the medical insurance charges.
+- Age, BMI and no. of children are **positively related** to the charges. 
+- Smokers are charged higher than non-smokers.
+- Northeast Region charges the highest, the charges would be lower in other three regions.
+- The insurance company can charge their clients based on age, bmi, smoking habit, no. of children and regions.  
 
 ## Dataset :
 This dataset is provided in the book "Machine Learning with R" which can be found on [Github](https://github.com/stedy/Machine-Learning-with-R-datasets) or [Kaggle](https://www.kaggle.com/mirichoi0218/insurance). The data contains medical information and costs billed by health insurance companies. It contains 1338 rows of data and the following columns:
@@ -61,6 +67,10 @@ The majority of the sample has 3 children or less. Those who have **5 children**
 
 
 ## Results : 
+
+Multiple Regression model is used without including **sex** as an independent variable after removing outliers of BMI.
+Data is split into training and testing sets : 70% for training ; 30% for testing.
+
 ### Interpretation of the coefficients 
 ![summary](/images/summary_reg.png)  
 - Age : when age increases by 1 unit, i.e. 1 year older, the insurance premium increase by $252.35, holding other variables constant
